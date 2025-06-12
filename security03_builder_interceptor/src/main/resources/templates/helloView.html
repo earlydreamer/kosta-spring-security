@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>첫 번째 Spring Boot 기반 MVC 테스트</h1>
+<hr>
+<h2>반갑다!! [[${ data }]]</h2>
+<h2>잘 해보자~~ <span th:text="${data}"> 뭐라두</span>!!</h2>
+<h3>그러자!!~~@@</h3>
+<hr>
+<!--<div th:text="${#ctx}"></div>-->
+<div th:text="${#ctx.locale}"></div>
+<div th:text="${#locale}"></div>
+<div th:text="${#ctx.request}"></div>
+<div th:text="${#ctx.response}"></div>
+<div th:text="${#ctx.setvletContext}"></div>
+[[10+20]]
+<hr>
+[[10-20]]
+[[10*20]]
+[[10/20]]
+[[10%20]]
+[[10 == 20]]
+[[ data ]]
+</body>
+</html>
