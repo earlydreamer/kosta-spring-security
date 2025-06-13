@@ -31,7 +31,7 @@ public class MemberServiceImpl implements MemberService {
     @Override
     @Transactional
     public void signUp(Member member) {
-        if(memberRepository.existById(member.getId())){
+        if(memberRepository.existsById(member.getId())){
             throw new MemberAuthenticationException(ErrorCode.DUPLICATED);
         }
         member.setPwd(passwordEncoder.encode(member.getPwd()));
